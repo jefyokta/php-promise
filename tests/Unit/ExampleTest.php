@@ -115,7 +115,7 @@ test('finally callback returning promise', function () {
 test('wait blocks until resolution', function () {
     $resolved = false;
 
-    $promise = new Promise(function ($resolve) use ($resolved) {
+    $promise = new Promise(function ($resolve) use (&$resolved) {
         spawn(function () use ($resolve, &$resolved) {
             Coroutine::sleep(0.01);
             $resolved = true;
@@ -322,20 +322,22 @@ test('promise multiple then handlers', function () {
 });
 
 test('promise late then handler', function () {
-    $executed = false;
-
-    $promise = new Promise(function ($resolve) use (&$executed) {
-        spawn(function () use ($resolve, &$executed) {
-            Coroutine::sleep(0.01);
-            $executed = true;
-            $resolve('late');
+    async(function(){
+        $executed = false;
+    
+        $promise = new Promise(function ($resolve) use (&$executed) {
+            spawn(function () use ($resolve, &$executed) {
+                Coroutine::sleep(0.01);
+                $executed = true;
+                $resolve('late');
+            });
         });
-    });
-
-    Coroutine::sleep(0.02); // Wait for resolution
-
-    $result = $promise->then(fn($v) => $v . ' processed')->wait();
-
-    expect($executed)->toBeTrue();
-    expect($result)->toBe('late processed');
+    
+        Coroutine::sleep(0.02);
+    
+        $result = $promise->then(fn($v) => $v . ' processed')->wait();
+    
+        expect($executed)->toBeTrue();
+        expect($result)->toBe('late processed');
+    })();
 });
