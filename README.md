@@ -13,12 +13,12 @@ A PHP Promise implementation following the Promises/A+ specification, built on t
 - ✅ Full promise chaining with `then()`, `catch()`, and `finally()`
 - ✅ Static methods: `Promise::all()`, `Promise::race()`, `Promise::any()`
 - ✅ Async/await syntax support with `async()` and `await()` functions
-- ✅ Type-safe with PHP 8.1+ features
+- ✅ Type-safe with PHP 8.2+ features
 - ✅ Comprehensive test suite
 
 ## Requirements
 
-- PHP 8.w or higher
+- PHP 8.2 or higher
 - Swoole extension (recommended 5.0+)
 
 ## Installation
