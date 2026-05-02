@@ -16,7 +16,7 @@
     ],
     "require-dev": {
         "swoole/ide-helper": "^6.0",
-    "pestphp/pest": "^2.0 || ^3.0"
+        "pestphp/pest": "^2.0 || ^3.0"
     },
     "scripts": {
         "test": "./vendor/bin/pest",
@@ -24,7 +24,7 @@
     },
     "config": {
         "allow-plugins": {
-   
+            "pestphp/pest-plugin": true
         }
     },
     "license": "MIT"
