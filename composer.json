@@ -18,6 +18,10 @@
         "swoole/ide-helper": "^6.0",
         "pestphp/pest": "^4.6"
     },
+    "scripts": {
+        "test": "./vendor/bin/pest",
+        "test:coverage": "./vendor/bin/pest --coverage"
+    },
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
