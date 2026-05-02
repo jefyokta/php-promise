@@ -18,7 +18,7 @@ A PHP Promise implementation following the Promises/A+ specification, built on t
 
 ## Requirements
 
-- PHP 8.1 or higher
+- PHP 8.w or higher
 - Swoole extension (recommended 5.0+)
 
 ## Installation
