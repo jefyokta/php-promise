@@ -1,7 +1,7 @@
 # PHP Promise
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jefyokta/php-promise.svg?style=flat-square)](https://packagist.org/packages/jefyokta/php-promise)
-[![Tests](https://img.shields.io/github/actions/workflow/status/jefyokta/php-promise/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jefyokta/php-promise/actions/workflows/run-tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/jefyokta/php-promise/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jefyokta/php-promise/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/jefyokta/php-promise.svg?style=flat-square)](https://packagist.org/packages/jefyokta/php-promise)
 
 A PHP Promise implementation following the Promises/A+ specification, built on top of Swoole coroutines for true asynchronous programming.
