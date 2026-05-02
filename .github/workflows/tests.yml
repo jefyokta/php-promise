@@ -34,7 +34,7 @@ jobs:
         run: php --version
 
       - name: Check Swoole version
-        run: php -r "echo 'Swoole version: ' . swoole_version() . PHP_EOL;"
+        run: php -r "echo 'Swoole version ' . swoole_version() . PHP_EOL;"
 
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
