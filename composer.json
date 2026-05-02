@@ -1,0 +1,26 @@
+{
+    "name": "jefyokta/php-promise",
+    "description": "Asyncronous Programming with Promise spec using swoole coroutine",
+    "autoload": {
+        "psr-4": {
+            "JefyOkta\\PhpPromise\\": "src/",
+            "Tests\\":"tests/"
+        },
+        "files": ["src/Functions.php"]
+    },
+    "authors": [
+        {
+            "name": "Jepi Oktamipa",
+            "email": "jefyokta50@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "swoole/ide-helper": "^6.0",
+        "pestphp/pest": "^4.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
